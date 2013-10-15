@@ -43,7 +43,7 @@ class plgSystemActionbutton extends JPlugin {
 
 			foreach ($matches as $match) {
 
-				$replacement = '<a class="actionbutton" href="' . $match[1] . '">' . $match[2] . '</a>';
+				$replacement = '<a class="actionbutton" target="_blank" title="' . $match[2] . '" href="' . $match[1] . '">' . $match[2] . '</a>';
 
 				$buffer = str_replace($match[0], $replacement, $buffer);
 			}
