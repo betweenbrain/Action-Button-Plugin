@@ -41,30 +41,6 @@ class plgSystemActionbutton extends JPlugin {
 
 		if (count($matches)) {
 
-			$css = "<style>
-a.actionbutton {
-	background      : url('//guggenheim.org/media/com_calendar2/images/site/actionbutton.png') no-repeat center;
-	width           : 112px;
-	height          : 42px;
-	display         : table-cell;
-	vertical-align  : middle;
-	text-decoration : none;
-	font-weight     : bold;
-	text-transform  : uppercase;
-	color           : #000;
-	font-size       : 11px;
-	text-align      : center;
-}
-
-a.actionbutton:hover {
-	background-image : url('//guggenheim.org/media/com_calendar2/images/site/actionbutton_hover.png');
-	cursor           : pointer;
-}
-</style>
-";
-
-			$buffer = str_replace('</head>', $css . '</head>', $buffer);
-
 			foreach ($matches as $match) {
 
 				$replacement = '<a class="actionbutton" href="' . $match[1] . '">' . $match[2] . '</a>';
